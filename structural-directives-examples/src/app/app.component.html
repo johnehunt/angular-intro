@@ -1,0 +1,9 @@
+<button type="button" (click)="toggleShow()">Toggle Component</button>
+<div *ngIf="show"><p>Hello</p></div>
+<hr />
+<ul>
+  <app-for-example *ngFor="let play of plays" [play]="play">
+	<li>{{play.title}}</li>
+  </app-for-example>
+</ul>
+<hr />
