@@ -1,0 +1,16 @@
+<form #form="ngForm" (ngSubmit)="registerUser(form)">
+    <p>
+        <label>ISBN</label> <input type="text" name="isbn" ngModel>
+    </p>
+    <fieldset ngModelGroup="author">
+        <label>firstName</label> <input type="text" name="firstName" ngModel>
+        <label>lastName</label> <input type="text" name="lastName" ngModel>
+    </fieldset>
+
+    <fieldset ngModelGroup="book">
+        <label>Title</label> <input type="text" name="title" ngModel>
+        <label>Sub Title</label> <input type="text" name="subtitle" ngModel>
+    </fieldset>
+
+    <button type="submit">Enter</button>
+</form>

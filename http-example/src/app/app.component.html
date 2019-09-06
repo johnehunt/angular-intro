@@ -1,0 +1,21 @@
+<h2>Online Shop</h2>
+<div>
+	<form #form="ngForm" (ngSubmit)="search(form)">
+		<p>
+			<label for="searchfor">Search Option</label> &nbsp;
+			<input type="text" name="searchfor" [(ngModel)]="searchfor">
+			(books or songs)
+		</p>
+		<p><button type="submit">Search</button></p>
+	</form>
+</div>
+<p><button (click)="cancel()">Cancel</button></p>
+<hr />
+<h2>Search Results</h2>
+<div *ngIf="results != null">
+	<ul>
+		<div *ngFor="let result of results">
+			<li>id({{result.id}}) '{{result.title}}' by {{result.author}} @ {{result.price}}</li>
+		</div>
+	</ul>
+</div>

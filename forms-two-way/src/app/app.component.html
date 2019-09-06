@@ -1,0 +1,17 @@
+<div>
+    <h1>Two Way Binding Example</h1>
+    <div>
+        <form #form="ngForm" (ngSubmit)="submitMessage(form)">
+            <label>Name</label>
+            <input type="text" name="name" [(ngModel)]="name" />
+            <br />
+            <label>Age</label>
+            <input type="text" name="age" [(ngModel)]="age" />
+            <hr />
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <div>
+        <button (click)="incrementAge()">Increment Age</button>
+    </div>
+</div>
