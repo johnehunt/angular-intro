@@ -1,0 +1,6 @@
+<form #form="ngForm" (ngSubmit)="submitMessage(form)">
+  <label>Msg: </label>
+  <input type="text" name="message" [ngModel]="message">
+    <button type="submit">Sign Up</button>
+</form>
+  
